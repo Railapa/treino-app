@@ -1,0 +1,117 @@
+.tela-historico {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 100px;
+}
+
+.tela-historico__cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tela-historico__cabecalho h1 {
+  font-size: 22px;
+}
+
+.tela-historico__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item-lista-historico {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--cor-fundo-elevado);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  color: var(--cor-texto);
+  padding: 15px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.item-lista-historico__seta {
+  color: var(--cor-texto-fraquissimo);
+  font-size: 18px;
+}
+
+.tela-historico__vazio {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  color: var(--cor-texto-fraco);
+  padding-bottom: 60px;
+}
+
+.tela-historico__vazio-dica {
+  font-size: 13px;
+  color: var(--cor-texto-fraquissimo);
+  max-width: 280px;
+}
+
+.tabela-historico-wrap {
+  overflow-x: auto;
+}
+
+.tabela-historico__faixa {
+  font-size: 13px;
+  color: var(--cor-texto-fraco);
+  margin-bottom: 14px;
+}
+
+.tabela-historico {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+}
+
+.tabela-historico th {
+  text-align: left;
+  color: var(--cor-texto-fraco);
+  font-weight: 500;
+  font-size: 11px;
+  padding: 0 10px 8px 0;
+  white-space: nowrap;
+}
+
+.tabela-historico td {
+  padding: 10px 10px 10px 0;
+  border-top: 1px solid var(--cor-borda);
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.tabela-historico__data {
+  color: var(--cor-texto-fraco);
+  font-weight: 500;
+}
+
+.tabela-historico td span {
+  display: block;
+}
+
+.tabela-historico__reps {
+  color: var(--cor-texto-fraco);
+  font-size: 12px;
+}
+
+.tabela-historico__vazio-celula {
+  color: var(--cor-texto-fraquissimo);
+}
+
+.tabela-historico__celula--teto span:first-child {
+  color: var(--cor-accent);
+  font-weight: 600;
+}

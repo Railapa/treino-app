@@ -1,0 +1,99 @@
+.overlay-cronometro {
+  position: fixed;
+  inset: 0;
+  background: var(--cor-fundo);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px;
+}
+
+.overlay-cronometro__fechar {
+  position: absolute;
+  top: calc(20px + env(safe-area-inset-top, 0));
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--cor-texto-fraco);
+}
+
+.overlay-cronometro__legenda {
+  color: var(--cor-texto-fraco);
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.overlay-cronometro__anel {
+  --tamanho: 240px;
+  width: var(--tamanho);
+  height: var(--tamanho);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(
+    var(--cor-anel) calc(var(--progresso) * 360deg),
+    var(--cor-fundo-elevado) 0
+  );
+  transition: background 0.3s linear;
+  position: relative;
+}
+
+.overlay-cronometro__anel::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+  background: var(--cor-fundo);
+}
+
+.overlay-cronometro__tempo {
+  position: relative;
+  font-size: 52px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.overlay-cronometro__aviso {
+  color: var(--cor-accent);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.overlay-cronometro__controles {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.botao-cronometro {
+  padding: 12px 24px;
+  border-radius: var(--raio);
+  border: 1px solid var(--cor-borda);
+  background: var(--cor-fundo-elevado);
+  color: var(--cor-texto);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.botao-cronometro--fantasma {
+  background: none;
+  color: var(--cor-texto-fraco);
+}
+
+.overlay-cronometro__concluir {
+  position: absolute;
+  bottom: calc(32px + env(safe-area-inset-bottom, 0));
+  width: calc(100% - 48px);
+  max-width: 400px;
+  background: var(--cor-accent);
+  color: var(--cor-accent-texto);
+  border: none;
+  border-radius: var(--raio);
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 600;
+}

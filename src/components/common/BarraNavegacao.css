@@ -1,0 +1,32 @@
+.barra-nav {
+  display: flex;
+  border-top: 1px solid var(--cor-borda);
+  background: var(--cor-fundo-elevado);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+}
+
+.barra-nav__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 0 8px;
+  background: none;
+  border: none;
+  color: var(--cor-texto-fraco);
+  font-size: 12px;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.barra-nav__item--ativo {
+  color: var(--cor-accent);
+}
+
+.barra-nav__item:disabled {
+  opacity: 0.35;
+}

@@ -1,0 +1,209 @@
+.treino-ativo {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.treino-ativo__cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 16px;
+  border-bottom: 1px solid var(--cor-borda);
+  position: sticky;
+  top: 0;
+  background: var(--cor-fundo);
+  z-index: 10;
+}
+
+.treino-ativo__cabecalho h1 {
+  font-size: 16px;
+  text-align: center;
+}
+
+.treino-ativo__lista {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cartao-exercicio {
+  background: var(--cor-fundo-elevado);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+}
+
+.cartao-exercicio--completo {
+  border-color: var(--cor-accent);
+}
+
+.cartao-exercicio__cabecalho {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  color: var(--cor-texto);
+  padding: 15px 16px;
+  text-align: left;
+}
+
+.cartao-exercicio__titulo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.cartao-exercicio__check {
+  color: var(--cor-accent);
+}
+
+.cartao-exercicio__resumo {
+  font-size: 12px;
+  color: var(--cor-texto-fraco);
+}
+
+.cartao-exercicio__corpo {
+  padding: 0 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top: 1px solid var(--cor-borda);
+  padding-top: 14px;
+}
+
+.campo-peso-referencia {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.campo-peso-referencia span {
+  font-size: 12px;
+  color: var(--cor-texto-fraco);
+}
+
+.campo-peso-referencia input {
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-accent);
+  border-radius: var(--raio-pequeno);
+  color: var(--cor-texto);
+  padding: 10px 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.grupo-serie {
+  border-left: 3px solid transparent;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.grupo-serie--aquecimento {
+  border-left-color: var(--cor-aquecimento);
+}
+.grupo-serie--preparatoria {
+  border-left-color: var(--cor-preparatoria);
+}
+.grupo-serie--valida {
+  border-left-color: var(--cor-valida);
+}
+
+.grupo-serie__titulo {
+  font-size: 12px;
+  color: var(--cor-texto-fraco);
+  font-weight: 600;
+}
+
+.linha-serie {
+  display: grid;
+  grid-template-columns: 18px 52px 1fr 1fr 34px;
+  grid-template-areas: "num peso pesoinput repsinput concluir" ". anterior anterior anterior .";
+  align-items: center;
+  gap: 6px 6px;
+}
+
+.linha-serie__numero {
+  grid-area: num;
+  font-size: 12px;
+  color: var(--cor-texto-fraquissimo);
+}
+
+.linha-serie__peso {
+  grid-area: peso;
+  font-size: 12px;
+  color: var(--cor-texto-fraco);
+}
+
+.linha-serie__anterior {
+  grid-area: anterior;
+  font-size: 11px;
+  color: var(--cor-texto-fraquissimo);
+  margin-top: -2px;
+}
+
+.linha-serie__input {
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  color: var(--cor-texto);
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
+  min-width: 0;
+}
+
+.linha-serie__input--peso {
+  grid-area: pesoinput;
+}
+
+.linha-serie__input--reps {
+  grid-area: repsinput;
+}
+
+.linha-serie__concluir {
+  grid-area: concluir;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--cor-borda);
+  background: var(--cor-fundo);
+  color: var(--cor-texto-fraquissimo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linha-serie__concluir--ativo {
+  background: var(--cor-accent);
+  border-color: var(--cor-accent);
+  color: var(--cor-accent-texto);
+}
+
+.grupo-serie__descanso {
+  align-self: flex-start;
+  background: none;
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  color: var(--cor-texto-fraco);
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.treino-ativo__rodape {
+  padding: 14px 16px calc(14px + env(safe-area-inset-bottom, 0));
+  border-top: 1px solid var(--cor-borda);
+  background: var(--cor-fundo);
+  position: sticky;
+  bottom: 0;
+}

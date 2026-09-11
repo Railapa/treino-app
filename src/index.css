@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root {
+  color-scheme: dark;
+
+  --cor-fundo: #15171a;
+  --cor-fundo-elevado: #1d2024;
+  --cor-fundo-elevado-2: #24282d;
+  --cor-borda: #33383e;
+  --cor-texto: #edeeef;
+  --cor-texto-fraco: #9a9fa6;
+  --cor-texto-fraquissimo: #6b7078;
+
+  --cor-accent: #b4f42a;
+  --cor-accent-texto: #101302;
+
+  --cor-aquecimento: #6b8cae;
+  --cor-preparatoria: #e0a458;
+  --cor-valida: #b4f42a;
+
+  --cor-perigo: #e0625a;
+
+  --raio: 10px;
+  --raio-pequeno: 6px;
+
+  --fonte: "Space Grotesk", system-ui, sans-serif;
+
+  font-family: var(--fonte);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+body {
+  font-family: var(--fonte);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+#root {
+  min-height: 100vh;
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: var(--fonte);
+  cursor: pointer;
+}
+
+input,
+select {
+  font-family: var(--fonte);
+}
+
+.numeros {
+  font-variant-numeric: tabular-nums;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cor-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
